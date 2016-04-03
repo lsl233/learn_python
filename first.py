@@ -148,15 +148,56 @@
 # print(list(filter(is_add, range(1, 11))))
 
 # 装饰器
+# def log (func):
+#     def wrapper(*grgs, **kw):
+#         print('call %s():' % func.__name__)
+#         return func(*grgs, **kw)
+#     return wrapper
+#
+# def now():
+#     print('2015-3-25')
+#
+# log(now)
+# def log(fn):
+#     def wrapper(*grgs, **kw):
+#         print('start...')
+#         fn(*grgs, **kw)
+#         print('...end')
+#     return wrapper
+# @log
+# def dfn(name):
+#     print('name:', name)
+#
+# dfn('123')
 
-def log (func):
-    def wrapper(*grgs, **kw):
-        print('call %s():' % func.__name__)
-        return func(*grgs, **kw)
-    return wrapper
+# 类 访问限制
+# class Student(object):
+#
+#     def __init__(self, name, score):
+#         self.__name = name
+#         self.__score = score
+#
+#     def print_score(self):
+#         print('%s: %s' % (self.__name, self.__score))
+#
+#     def get_grade(self):
+#         if self.__score >= 90:
+#             return 'A'
+#         elif self.__score >= 60:
+#             return 'B'
+#         else:
+#             return 'C'
+#
+# bart = Student('lsl', 100)
+# bart.name = 'ssss'
+# print(bart.__name)
 
-@log
-def now():
-    print('2015-3-25')
+class Animal(object):
+    def run(self):
+        print('Animal is runing...')
 
-now()
+class Dog(Animal):
+    pass
+
+d = Dog()
+d.run()
