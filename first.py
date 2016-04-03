@@ -110,8 +110,53 @@
 # print(result)
 
 # map
-def f(x):
-    return x * x
+# def f(x):
+#     return x * x
+#
+# r = map(f, range(1, 10))
+# print(list(r))
 
-r = map(f, range(1, 10))
-print(list(r))
+# 首字母大写 capitalize
+# def normal(name):
+#     return name.capitalize()
+#
+# L1 = ['adam', 'LISA', 'barT']
+# L2 = list(map(normal, L1))
+# print(L2)
+
+# 乘法运算
+# from functools import reduce
+# def products(x, y):
+#     return x * y
+#
+# def prod(list):
+#     return reduce(products, list)
+#
+# print('3 * 4 * 5 =', prod([3, 4, 5])
+
+# 字符串转浮点数
+# from functools import reduce
+# def str2float(s):
+#     return float(s)
+# print(isinstance(str2float('123.456'), str))
+#
+# print(isinstance('123.456', str))
+
+# filter 过滤
+# def is_add(n):
+#     return n % 2 == 1
+# print(list(filter(is_add, range(1, 11))))
+
+# 装饰器
+
+def log (func):
+    def wrapper(*grgs, **kw):
+        print('call %s():' % func.__name__)
+        return func(*grgs, **kw)
+    return wrapper
+
+@log
+def now():
+    print('2015-3-25')
+
+now()
