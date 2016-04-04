@@ -192,12 +192,39 @@
 # bart.name = 'ssss'
 # print(bart.__name)
 
-class Animal(object):
-    def run(self):
-        print('Animal is runing...')
+# class Animal(object):
+#     def run(self):
+#         print('Animal is runing...')
+#
+# class Dog(Animal):
+#     pass
+#
+# d = Dog()
+# print(len('aaa'))
+# print('ABDASDFD'.lower())
+# print(hasattr(Animal, 'runs', 404))
 
-class Dog(Animal):
-    pass
+# import datetime
+# now = datetime.now()
+# print(datetime.datetime.now())
 
-d = Dog()
-d.run()
+# file = open('C:/Users/Administrator/Desktop/aaa.text', 'w')
+# file.write('aaaaaaaaaaaaaaaaaaaaaaaa')
+
+# print('  *', ' ***', '*****', '  |  ', sep = "\n")
+
+# def foo (num):
+#     n = num + num
+#     assert n != 0, 'aaaaaaaaaaaaa'
+#     return n
+# foo(0)
+
+# file = open('C:/Users/Administrator/Desktop/aaa.text', 'r')
+# file.read()
+# file.close()、
+
+import os
+# os.uname()
+print(os.path.abspath('.'))
+os.path.join('H:\learn\python', 'bbb')
+os.mkdir('H:\learn\python')
