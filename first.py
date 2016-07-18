@@ -223,8 +223,18 @@
 # file.read()
 # file.close()、
 
-import os
-# os.uname()
-print(os.path.abspath('.'))
-os.path.join('H:\learn\python', 'bbb')
-os.mkdir('H:\learn\python')
+# import os
+# # os.uname()
+# print(os.path.abspath('.'))
+# os.path.join('H:\learn\python', 'bbb')
+# os.mkdir('H:\learn\python')
+
+def power(x, n=3):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+
+a = power(5)
+print('aaaaaaaa', a)
